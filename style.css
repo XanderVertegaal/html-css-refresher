@@ -1,0 +1,82 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+}
+
+article {
+    display: flex;
+    justify-content: flex-start;
+}
+
+section {
+    margin: 20px;
+    border: grey 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    display: grid;
+    grid-template-areas:
+    "name name name pic pic"
+    "sub sub sub pic pic"
+    "mes mes mes mes mes"
+    "lin lin lin lin lin"
+    "but but but but but";
+}
+
+.name {
+    font-size: larger;
+    font-weight: 700;
+    grid-area: name;
+}
+
+.membership {
+    grid-area: sub;
+    color: grey;
+}
+
+img {
+    width: 60px;
+    grid-area: pic;
+    justify-self: center;
+    align-self: top;
+}
+
+img + p {
+    margin: 5px 0;
+    grid-area: mes;
+}
+
+div.button {
+    grid-area: but;
+    text-align: center;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    border-top: 2px grey solid;
+}
+
+.approve {
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: green;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: green 3px solid;
+    width: 150px;
+}
+
+.decline {
+    margin-top: 10px;
+    padding: 10px 20px;
+    color: red;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: red 3px solid;
+    width: 150px;
+}
